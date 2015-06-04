@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<!--
+*
+*  Copyright 2015 Robert Campbell. All rights reserved.
+* 
+*  Licensed under the Apache License, Version 2.0 (the "License");
+*  you may not use this file except in compliance with the License.
+*  You may obtain a copy of the License at
+*
+*  http://www.apache.org/licenses/LICENSE-2.0
+*
+*  Unless required by applicable law or agreed to in writing, software
+*  distributed under the License is distributed on an "AS IS" BASIS,
+*  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+*  See the License for the specific language governing permissions and
+*  limitations under the License.
+*
+*-->
+<html lang="en-GB">
+
+<head>
+    <meta charset="utf-8" />
+    <title>menu-panel</title>
+    <meta name="author" content="Robert Campbell" />
+    <meta name="description" content="A mobile optimised menu panel" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="manifest" href="manifest.json" />
+    <!-- Add to homescreen and theme color for Android Chrome -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta id="theme-color" name="theme-color" content="hsl(190, 100%, 36%)" />
+    <!-- Add to homescreen for iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="menu-panel" />
+    <!-- Homescreen touch icons for iOS -->
+    <link rel="apple-touch-icon" href="images/launcher-icons/icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="images/launcher-icons/icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="images/launcher-icons/icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="images/launcher-icons/icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/launcher-icons/icon-180x180.png" />
+    <!--build:css css/style.min.css-->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!--/build-->
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="main-header">
+            <h1 class="main-header__title">Application <em>Name goes here</em></h1>
+            <button class="rc-hamburger" id="js-rc-hamburger" aria-label="Open navigation menu">
+                <span class="rc-hamburger__top" id="js-rc-hamburger__top"></span>
+                <span class="rc-hamburger__bottom" id="js-rc-hamburger__bottom"></span>
+            </button>
+        </header>
+        <nav class="main-header__nav" id="js-main-header__nav">
+            <li class="nav__text">
+                <a href="#">
+                    <svg id="nav__home-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                        <path d="M20 40v-12h8v12h10v-16h6l-20-18-20 18h6v16z" />
+                        <path d="M0 0h48v48h-48z" fill="none" />
+                    </svg>
+                    <span>Home</span>
+                    <br/>This the first to animate</a>
+            </li>
+            <li class="nav__text">
+                <a href="#">
+                    <svg id="nav__project-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                        <path d="M0 0h48v48h-48z" fill="none" />
+                        <path d="M38 6h-8.37c-.82-2.32-3.02-4-5.63-4s-4.81 1.68-5.63 4h-8.37c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm-14 0c1.1 0 2 .89 2 2s-.9 2-2 2-2-.89-2-2 .9-2 2-2zm4 28h-14v-4h14v4zm6-8h-20v-4h20v4zm0-8h-20v-4h20v4z" />
+                    </svg>
+                    <span>projects</span>
+                    <br/>Section about something</a>
+            </li>
+            <li class="nav__text">
+                <a href="#">
+                    <svg id="nav__clients-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                        <path d="M0 0h48v48h-48z" fill="none" />
+                        <path d="M38 6h-8.37c-.82-2.32-3.02-4-5.63-4s-4.81 1.68-5.63 4h-8.37c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm-14 0c1.1 0 2 .89 2 2s-.9 2-2 2-2-.89-2-2 .9-2 2-2zm0 8c3.31 0 6 2.69 6 6 0 3.32-2.69 6-6 6s-6-2.68-6-6c0-3.31 2.69-6 6-6zm12 24h-24v-2.8c0-4 8-6.2 12-6.2s12 2.2 12 6.2v2.8z" />
+                    </svg>
+                    <span>clients</span>
+                    <br/>Section about something</a>
+            </li>
+            <li class="nav__text">
+                <a href="#">
+                    <svg id="nav__clients-icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                        <path d="M0 0h48v48h-48z" fill="none" />
+                        <path d="M38 6h-8.37c-.82-2.32-3.02-4-5.63-4s-4.81 1.68-5.63 4h-8.37c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm-14 0c1.1 0 2 .89 2 2s-.9 2-2 2-2-.89-2-2 .9-2 2-2zm0 8c3.31 0 6 2.69 6 6 0 3.32-2.69 6-6 6s-6-2.68-6-6c0-3.31 2.69-6 6-6zm12 24h-24v-2.8c0-4 8-6.2 12-6.2s12 2.2 12 6.2v2.8z" />
+                    </svg>
+                    <span>contact</span>
+                    <br/>more information here</a>
+            </li>
+        </nav>
+        <div role="main" class="main-content" id="js-main-content">
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208960d/Adonis-annua.jpg"/>-->
+                <h1 class="plantname">Adonis annua</h1>
+                <h2 class="commonname">pheasant's eye</h2>
+                <section class="othercommonnames">
+                    <h3>Other common names</h3>
+                    <ul>
+                        <li>Adonis' flower</li>
+                        <li>autumn Adonis</li>
+                        <li>autumn pheasant's eye</li>
+                        <li>red chamomile</li>
+                        <li>red morocco</li>
+                        <li>rose-a-ruby</li>
+                    </ul>
+                </section>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Ranunculaceae / Ranunculaceae</p>
+                </section>
+                <section class="synonyms">
+                    <h3>synonyms</h3>
+                    <p>Adonis autumnalis</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Adonis can be annuals or herbaceous perennials, with attractive, finely divided leaves and solitary red, yellow or white, bowl-shaped flowers.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>A. annua is an upright annual with finely dissected, bright green leaves and cup-shaped deep scarlet flowers to 2.5cm across, in early summer.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Columnar/Upright</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>North-facing</li>
+                        <li>West-facing</li>
+                        <li>East-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Exposed or Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.1-0.5 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1-2 years</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Grow in an open rocky site in alkaline soil</p>
+                    <p><span>propogation:</span>Propagate by seed</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>No pruning required</p>
+                    <p><span>pests:</span>May be damaged by slugs</p>
+                    <p><span>diseases:</span>Generally disease free</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a2089b94/Agastache-aurantiaca.jpg"/>-->
+                <h1 class="plantname">Agastache aurantiaca 'Apricot Sprite'</h1>
+                <h2 class="commonname">giant hyssop 'Apricot Sprite'</h2>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Lamiaceae / Lamiaceae</p>
+                </section>
+                <section class="synonyms">
+                    <h3>synonyms</h3>
+                    <p>Agastache 'Apricot Sprite'</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Agastache are herbaceous perennials with simple, aromatic leaves and small 2-lipped tubular flowers in whorls forming dense spikes, in summer and autumn; some are rather tender but can be grown as annual bedding.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>A. aurantiaca 'Apricot Sprite' is a tender perennial often grown as an annual, with aromatic leaves, and spikes of 2-lipped, tubular, dark orange flowers in late summer and autumn.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Columnar/Upright</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Exposed or Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.1-0.5 metres</p>
+                    <p><span>spread:</span>0-0.1 metre</p>
+                    <p><span>time to height:</span>1-2 years</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Can be used as a gap-filler in herb gardens or in sunny, dry places, for example at the base of walls. Grows best in well-drained alkaline soil but will tolerate poor acid soils. Short-lived</p>
+                    <p><span>propogation:</span>Propagate by seed</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>Remove spent flowering spikes through the season</p>
+                    <p><span>pests:</span>Generally pest free</p>
+                    <p><span>diseases:</span>Generally disease free</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208a796/Ageratum-houstonianum.jpg"/>-->
+                <h1 class="plantname">Ageratum houstonianum 'Blue Danube'</h1>
+                <h2 class="commonname">Mexican paintbrush 'Blue Danube'</h2>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Asteraceae / Asteraceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Ageratum can be annuals, perennials or shrubs, usually bushy in habit, with simple ovate leaves and small fluffy blue, pink or white flower-heads in summer and autumn.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>'Blue Danube' is an annual to 20cm, forming a compact mound of oval leaves, with fluffy heads of lavender-blue flowers in summer and autumn.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Bushy</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.1-0.5 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1-2 years</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>This genus is ideal edging for bedding schemes, but in addition 'Blue Danube' is compact enough to be grown in a container, bearing weather-resistant flowers on young plants. To prolong flowering, keep soil or growing media moist.</p>
+                    <p><span>propogation:</span>Propagate by seed</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>No pruning required</p>
+                    <p><span>pests:</span>Generally pest free</p>
+                    <p><span>diseases:</span>Generally disease free</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208acb4/Ageratum-houstonianum-HawaiiWhite.jpg"/>-->
+                <h1 class="plantname">Ageratum houstonianum 'Hawaii White'</h1>
+                <h2 class="commonname">Mexican paintbrush 'Hawaii White'</h2>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Asteraceae / Asteraceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Ageratum can be annuals, perennials or shrubs, usually bushy in habit, with simple ovate leaves and small fluffy blue, pink or white flower-heads in summer and autumn.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>'Hawaii White' is a compact, mound-forming annual with fluffy heads of white flowers opening over a long period from mid summer to late autumn.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Bushy</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.1-0.5 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1 year</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>This genus is ideal edging for bedding schemes, but in addition 'Blue Danube' is compact enough to be grown in a container, bearing weather-resistant flowers on young plants. To prolong flowering, keep soil or growing media moist.</p>
+                    <p><span>propogation:</span>Propagate by seed</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>No pruning required</p>
+                    <p><span>pests:</span>Generally pest free</p>
+                    <p><span>diseases:</span>Generally disease free</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208b4ad/Agrostemma-githago.jpg"/>-->
+                <h1 class="plantname">Agrostemma githago</h1>
+                <h2 class="commonname">Corn Cockle</h2>
+                <section class="othercommonnames">
+                    <h3>Other common names</h3>
+                    <ul>
+                        <li>corncockle</li>
+                        <li>bastard nigella</li>
+                        <li>corn pink</li>
+                        <li>gith</li>
+                        <li>joy of love</li>
+                        <li>little and pretty</li>
+                    </ul>
+                </section>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Caryophyllaceae / Caryophyllaceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Agrostemma are upright annuals with narrow, opposite leaves and solitary, 5-petalled, open trumpet-shaped flowers with long calyx lobes showing between the petals.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>A. githago is an upright annual to 75cm, with narrow grey-green leaves and open funnel-shaped magenta-purple flowers 5cm across in summer.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Columnar/Upright</p>
+                    <h3>toxicity</h3>
+                    <p class="toxicity">All parts, but particularly the seeds may cause severe discomfort if ingested</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Exposed or Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.5-1 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1-2 year</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Grow in poor, well-drained soil in full sun. Lax growth needs to be staked, deadhead to prolong flowering. Flowers are suitable for cutting and are attractive to bees.</p>
+                    <p><span>propogation:</span>Propagate by seed sown in-situ, self-seeds prolifically</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>Cut back after flowering</p>
+                    <p><span>pests:</span>Generally pest free</p>
+                    <p><span>diseases:</span>Generally disease free</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208b846/Agrostemma-githago-OceanPearl.jpg"/>-->
+                <h1 class="plantname">Agrostemma githago 'Ocean Pearl'</h1>
+                <h2 class="commonname">Corncockle 'Ocean Pearl'</h2>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Caryophyllaceae / Caryophyllaceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Agrostemma are upright annuals with narrow, opposite leaves and solitary, 5-petalled, open trumpet-shaped flowers with long calyx lobes showing between the petals.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>'Ocean Pearl' is a much-branched annual with narrow, greyish leaves and abundant, solitary white flowers, with fine dark speckling in the throat, in summer.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Bushy</p>
+                    <h3>toxicity</h3>
+                    <p class="toxicity">All parts, but particularly the seeds may cause severe discomfort if ingested</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Exposed or Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.1-0.5 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1 year</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Grow in poor, well-drained soil in full sun. Lax growth needs to be staked, deadhead to prolong flowering. Flowers are suitable for cutting and are attractive to bees.</p>
+                    <p><span>propogation:</span>Propagate by seed sown in-situ, self-seeds prolifically</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>Cut back after flowering</p>
+                    <p><span>pests:</span>Generally pest free</p>
+                    <p><span>diseases:</span>Generally disease free</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208bc13/alcea-rosea.jpg"/>-->
+                <h1 class="plantname">Alcea rosea</h1>
+                <h2 class="commonname">hollyhock</h2>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Malvaceae / Malvaceae</p>
+                </section>
+                <section class="synonyms">
+                    <h3>synonyms</h3>
+                    <p>Althaea rosea</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Alcea are robust biennials or short-lived perennials with showy funnel-shaped flowers borne in tall, erect racemes in summer.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>A. rosea is a robust biennial or short-lived perennial to 2m or more, with shallowly lobed, rounded leaves and long erect racemes of open funnel-shaped flowers to 10cm across, which may be pink, purple, red, white or yellow.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Columnar/Upright</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered or Exposed</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>1.5-2.5 metres</p>
+                    <p><span>spread:</span>0.5-1 metres</p>
+                    <p><span>time to height:</span>2-5 years</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Grow in well-drained, moderately fertile soil in full sun. Stake on exposed sites.</p>
+                    <p><span>propogation:</span>Propagate by seed sown in gentle heat in mid-winter or in-situ in spring.</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>Cut back after flowering</p>
+                    <p><span>pests:</span>Young growth can be attacked by slugs and caterpillars; flea beetles occasionally causes significant defoliation.</p>
+                    <p><span>diseases:</span>Susceptible to a rust</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208c59b/Amaranthus-caudatus.jpg"/>-->
+                <h1 class="plantname">Amaranthus caudatus</h1>
+                <h2 class="commonname">love-lies-bleeding</h2>
+                <section class="othercommonnames">
+                    <h3>Other common names</h3>
+                    <ul>
+                        <li>careless</li>
+                        <li>cat tail</li>
+                        <li>chenile plant</li>
+                        <li>floramor</li>
+                        <li>Inca wheat</li>
+                        <li>ady's riding whip</li>
+                        <li>tassel flower</li>
+                        <li>teasel flower</li>
+                        <li>thrumwort</li>
+                        <li>tumbleweed</li>
+                        <li>velvet flower</li>
+                    </ul>
+                </section>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Amaranthaceae / Amaranthaceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Amaranthus can be upright or spreading annuals or short-lived perennials, with simple leaves and tiny flowers borne in dense, erect or pendulous, catkin-like inflorescences in summer and autumn.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>A. caudatus is a bushy, erect annual or biennial, with large ovate leaves and drooping, crimson tassel-like racemes of tiny flowers in summer and autumn.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Bushy</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>1-1.5 metres</p>
+                    <p><span>spread:</span>0.5-1 metres</p>
+                    <p><span>time to height:</span>1-2 years</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Grow in moist, fertile, humus-rich soil in full sun, in a sheltered site. Will tolerate poor soil, but then requires watering freely during dry periods in summer. Large enough to make an architectural feature, the flowers can be used for fresh or dried arrangements and birds love the seedheads.</p>
+                    <p><span>propogation:</span>Propagate by seed sown in-situ in mid-spring , thin to 60cm apart</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>Cut back after flowering</p>
+                    <p><span>pests:</span>Can get aphids</p>
+                    <p><span>diseases:</span>A virus may cause problems</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208c5e7/Amaranthus-hypochondriacus-GreenThumb.jpg"/>-->
+                <h1 class="plantname">Amaranthus hypochondriacus 'Green Thumb'</h1>
+                <h2 class="commonname">prince's feather 'Green Thumb'</h2>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Amaranthaceae / Amaranthaceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Amaranthus can be upright or spreading annuals or short-lived perennials, with simple leaves and tiny flowers borne in dense, erect or pendulous, catkin-like inflorescences in summer and autumn.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>'Green Thumb' is a bushy upright-growing annual to 60cm, with large, oblong, purple leaves and erect, plume-like, bright yellow-green inflorescences from summer to early autumn. Good for cutting or drying.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Bushy</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.5-1 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1 year</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Under glass, grow in loam-based potting compost such as John Innes Number 2, in full sun in a sheltered position.</p>
+                    <p><span>propogation:</span>Sow seed at 20°C (68°F) in mid spring</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>None required</p>
+                    <p><span>pests:</span>Aphids may be a problem</p>
+                    <p><span>diseases:</span>A virus may be troublesome</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208cc77/Amaranthus-hypochondriacus-PygmyTorch.jpg"/>-->
+                <h1 class="plantname">Amaranthus hypochondriacus 'Pygmy Torch'</h1>
+                <h2 class="commonname">prince's feather 'Pygmy Torch'</h2>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Amaranthaceae / Amaranthaceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Amaranthus can be upright or spreading annuals or short-lived perennials, with simple leaves and tiny flowers borne in dense, erect or pendulous, catkin-like inflorescences in summer and autumn.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>'Pygmy Torch' is a compact annual with lance-shaped green leaves and erect, deep maroon inflorescences, good for drying.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Bushy</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.1-0.5 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1 year</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Under glass, grow in loam-based potting compost such as John InnesNumber 2, in full sun in a sheltered position. Outdoors grow in a moderately fertile, humus-rich soil in full sun, in a sheltered position.</p>
+                    <p><span>propogation:</span>Sow seed at 20°C (68°F) in mid spring</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>None required</p>
+                    <p><span>pests:</span>Aphids may be a problem</p>
+                    <p><span>diseases:</span>A virus may be troublesome</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208cf3c/Amaranthus-hypochondriacus-PygmyTorch.jpg"/>-->
+                <h1 class="plantname">Amaranthus paniculatus 'Hot Bisquit'</h1>
+                <h2 class="commonname">showy amaranth 'Hot Bisquit'</h2>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Amaranthaceae / Amaranthaceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Amaranthus can be upright or spreading annuals or short-lived perennials, with simple leaves and tiny flowers borne in dense, erect or pendulous, catkin-like inflorescences in summer and autumn.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>'Hot Bisquit' is an upright annual with ovate mid-green leaves and coppery-orange, branched flower spikes.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Bushy</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">full sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.5-1 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1-2 years</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Grow in moist, fertile, humus-rich soil in full sun, in a sheltered site. Will tolerate poor soil, but then requires watering freely during dry periods in summer. Large enough to make an architectural feature, the flowers can be used for fresh or dried arrangements and birds love the seedheads.</p>
+                    <p><span>propogation:</span>Propagate by seed sown in-situ in mid-spring , thin to 60cm apart</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>Cut back after flowering</p>
+                    <p><span>pests:</span>Can get aphids</p>
+                    <p><span>diseases:</span>A virus may be troublesome</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208d783/Amaranthus-hypochondriacus-PygmyTorch.jpg"/>-->
+                <h1 class="plantname">Ammi majus</h1>
+                <h2 class="commonname">bullwort</h2>
+                <section class="othercommonnames">
+                    <h3>Other common names</h3>
+                    <ul>
+                        <li>common bishop's weed</li>
+                        <li>false bishop's weed</li>
+                        <li>herb William</li>
+                    </ul>
+                </section>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Apiaceae / Apiaceae</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Ammi can be annuals or biennials, upright or spreading, with fern-like, pinnately divided leaves and large, branched umbels of small creamy-white flowers in summer.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>Ammi majus is an upright annual with 2 to 3-pinnate leaves and compound umbels of small white flowers in summer.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Columnar/Upright</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">partial shade</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                        <li>East-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered or Exposed</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.5-1 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1-2 years</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Grow in any well-drained soil in full sun or partial shade, provide support when seedlings reach 7-10cm (3-4in) high.</p>
+                    <p><span>propogation:</span>Propagate by seed sown in situ in spring</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>Cut back after flowering</p>
+                    <p><span>pests:</span>Generally pest free</p>
+                    <p><span>diseases:</span>Generally disease free</p>
+                </section>
+            </article>
+            <article class="plant-entry">
+                <!--<img src="http://127.0.0.1:5984/plants/9e385533fde22bf8d1ac5211a208de72/Anethum-graveolens.jpg"/>-->
+                <h1 class="plantname">Anethum graveolens</h1>
+                <h2 class="commonname">dill</h2>
+                <section class="othercommonnames">
+                    <h3>Other common names</h3>
+                    <ul>
+                        <li>anet</li>
+                        <li>dill-oil plant</li>
+                        <li>East Indian dill</li>
+                        <li>meeting-seed</li>
+                        <li>Sabbath day posy</li>
+                    </ul>
+                </section>
+                <section class="family">
+                    <h3>family</h3>
+                    <p>Apiaceae / Apiaceae</p>
+                </section>
+                <section class="synonyms">
+                    <h3>synonyms</h3>
+                    <p>Anethum sowa hort. non Roxb. ex Flem.</p>
+                </section>
+                <section class="genus">
+                    <h3>genus</h3>
+                    <p>Anethum can be annuals or biennials, scented of aniseed, with leaves finely divided into linear segments, and umbels of small yellow flowers in summer.</p>
+                </section>
+                <section class="details">
+                    <h3>details</h3>
+                    <p>A. graveolens is an upright annual with finely dissected, aromatic blue-green leaves, and flat umbels of tiny yellow flowers in summer.</p>
+                </section>
+                <section class="characteristics">
+                    <h2>characteristics</h2>
+                    <h3>Foliage</h3>
+                    <p class="foliage">Deciduous</p>
+                    <h3>habit</h3>
+                    <p class="habit">Columnar/Upright</p>
+                    <h3>Fragrance</h3>
+                    <p class="fragrance">Leaf</p>
+                </section>
+                <section class="colour">
+                    <h2>colour</h2>
+                    <h3>foliage colour</h3>
+                    <ul>
+                        <li>green</li>
+                        <li>green</li>
+                    </ul>
+                </section>
+                <section class="sunlight">
+                    <h2>sunlight</h2>
+                    <p class="sun">Full Sun</p>
+                    <h3 class="aspect-title">Aspect</h3>
+                    <ul class="aspect">
+                        <li>South-facing</li>
+                        <li>West-facing</li>
+                        <li>East-facing</li>
+                    </ul>
+                    <h3 class="exposure-title">Exposure</h3>
+                    <p class="exposure">Sheltered</p>
+                </section>
+                <section class="size">
+                    <h2>size</h2>
+                    <p><span>height:</span>0.5-1 metres</p>
+                    <p><span>spread:</span>0.1-0.5 metres</p>
+                    <p><span>time to height:</span>1-2 years</p>
+                </section>
+                <section class="how-to-grow">
+                    <h2>how to grow</h2>
+                    <p><span>cultivation:</span>Easy to grow in well-drained soil, in full sun sheltered from strong winds. Water freely in dry conditions to inhibit bolting. Keep separate from fennel as they look similar.</p>
+                    <p><span>propogation:</span>Propagate by seed sown in succession from spring to mid-summer</p>
+                </section>
+                <section class="how-to-care">
+                    <h2>how to care</h2>
+                    <p><span>pruning:</span>No pruning required; can be left to self-seed after flowering</p>
+                    <p><span>pests:</span>Generally pest free</p>
+                    <p><span>diseases:</span>Generally disease free</p>
+                </section>
+            </article>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/param.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/third_party/requestAnimationFrame.js"></script>
+    <script type="text/javascript" src="js/myHamburger.js"></script>
+    <script type="text/javascript" src="js/navPanel.js"></script>
+    <script type="text/javascript" src="js/contentFade.js"></script>
+    <script type="text/javascript" src="js/myPubSub.js"></script>
+    <script type="text/javascript">
+    (function(window, document) {
+
+        'use strict';
+
+        var button = new RCAM.widgets.Hamburger({
+                buttonId: 'js-rc-hamburger',
+                buttonLineTopId: 'js-rc-hamburger__top',
+                buttonLineBottomId: 'js-rc-hamburger__bottom'
+            }, {
+                onToggleState: function() {
+                    this.publish('stateToggled', this);
+                }
+            }),
+            navPanel = new RCAM.widgets.NavPanel('js-main-header__nav', {
+
+            }),
+            contentFade = new RCAM.widgets.ContentFade('js-main-content');
+
+        RCAM.makePublisher(button);
+
+        button.subscribe('stateToggled', 'toggleState', navPanel);
+
+        button.subscribe('stateToggled', 'toggleFade', contentFade);
+
+        window.RCAM.button = button;
+
+        //document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
+
+    }(this.window, this.document));
+    </script>
+</body>
+
+</html>
