@@ -75,6 +75,7 @@ RCAM.widgets.Hamburger = (function (global) {
          * @type Object
          */
         this.options = {
+            animate: true,
             onToggleState : null
         };
 
@@ -108,6 +109,11 @@ RCAM.widgets.Hamburger = (function (global) {
          * @type Object
          */
         this.buttonLineBottom = doc.getElementById(buttonLineBottomId);
+
+
+        if (!this.options.animate) {
+            this.animationTransitionOff();
+        }
 
         this.button.addEventListener(param.pointerStart, this, false);
         /*this.button.addEventListener(param.pointerEnd, this, false);*/
@@ -213,6 +219,12 @@ RCAM.widgets.Hamburger = (function (global) {
             this.button.removeEventListener(param.pointerStart, this, false);
             this.button.removeEventListener(param.pointerEnd, this, false);
             this.button.removeEventListener(param.pointerCancel, this, false);
+        },
+
+        animationTransitionOff : function () {
+            this.button.style.cssText += param.cssVendorPref + 'transition-duration: 0s;';
+            this.buttonLineTop.style.cssText += param.cssVendorPref + 'transition-duration: 0s;';
+            this.buttonLineBottom.style.cssText += param.cssVendorPref + 'transition-duration: 0s;';
         },
 
         /**

@@ -16,7 +16,8 @@ RCAM.widgets.NavPanel = (function (global) {
 
     /*jslint nomen:true*/
 
-    var doc = global.document;
+    var doc = global.document,
+        param = RCAM.param;
 
     function NavPanel(el, options) {
 
@@ -36,7 +37,7 @@ RCAM.widgets.NavPanel = (function (global) {
          * @type Object
          */
         this.options = {
-            foobar : null
+            animate : true
         };
 
         // Merge/replace the user defined options
@@ -48,6 +49,10 @@ RCAM.widgets.NavPanel = (function (global) {
          * @type Object
          */
         this.el = typeof el === 'object' ? el : doc.getElementById(el);
+
+        if (!this.options.animate) {
+            this.animationTransitionOff();
+        }
 
         /*this.el.style.cssText += param.cssVendorPref + 'transform: translate3d(0, -100%, 0);';*/
 
@@ -72,6 +77,10 @@ RCAM.widgets.NavPanel = (function (global) {
                     }
                 }
             }
+        },
+
+        animationTransitionOff : function () {
+            this.el.style.cssText += param.cssVendorPref + 'transition-duration: 0s;';
         },
 
         /**

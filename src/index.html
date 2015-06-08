@@ -979,14 +979,17 @@
                 buttonLineTopId: 'js-rc-hamburger__top',
                 buttonLineBottomId: 'js-rc-hamburger__bottom'
             }, {
+                animate: false,
                 onToggleState: function() {
                     this.publish('stateToggled', this);
                 }
             }),
             navPanel = new RCAM.widgets.NavPanel('js-main-header__nav', {
-
+                animate: false
             }),
-            contentFade = new RCAM.widgets.ContentFade('js-main-content');
+            contentFade = new RCAM.widgets.ContentFade('js-main-content', {
+                animate: false
+            });
 
         RCAM.makePublisher(button);
 

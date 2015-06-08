@@ -37,7 +37,7 @@ RCAM.widgets.ContentFade = (function (global) {
          * @type Object
          */
         this.options = {
-            foobar : null
+            animate : true
         };
 
         // Merge/replace the user defined options
@@ -49,6 +49,10 @@ RCAM.widgets.ContentFade = (function (global) {
          * @type Object
          */
         this.el = typeof el === 'object' ? el : doc.getElementById(el);
+
+        if (!this.options.animate) {
+            this.animationTransitionOff();
+        }
 
         this.el.addEventListener(param.pointerStart, this, false);
         this.el.addEventListener(param.pointerEnd, this, false);
@@ -108,6 +112,10 @@ RCAM.widgets.ContentFade = (function (global) {
                     }
                 }
             }
+        },
+
+        animationTransitionOff : function () {
+            this.el.style.cssText += param.cssVendorPref + 'transition-duration: 0s;';
         },
 
         /**
