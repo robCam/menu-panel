@@ -1002,6 +1002,50 @@
         //document.addEventListener('touchmove', function(e) { e.preventDefault(); }, false);
 
     }(this.window, this.document));
+
+    window.onload = function() {
+
+        'use strict';
+
+        var plantEntries = [].slice.call(document.querySelectorAll('.plant-entry')),
+            max = plantEntries.length,
+            changedList = [],
+            entryInfo = [],
+            i;
+
+        for (i = 0; i < max; i += 1) {
+            entryInfo.push({
+                titlePositionX: plantEntries[i].querySelector('.plantname').offsetLeft,
+                titlePositionY: plantEntries[i].querySelector('.plantname').offsetTop,
+                childElements: plantEntries[i].children,
+                needsRepositioning: function() {
+                    var elYPos,
+                        elXPos,
+                        ii = 0;
+                    for (ii; ii < entryInfo[i].childElements.length; ii += 1) {
+                        elYPos = entryInfo[i].childElements[ii].offsetTop;
+                        elXPos = entryInfo[i].childElements[ii].offsetLeft;
+                        if (elYPos > entryInfo[i].titlePositionY &&
+                            elYPos <= (entryInfo[i].titlePositionY + 16) &&
+                            elXPos !== entryInfo[i].titlePositionX) {
+
+                            changedList.push({
+                                ref: entryInfo[i].childElements[ii],
+                                originalMarginTop: parseInt(window.getComputedStyle(entryInfo[i].childElements[ii], null).getPropertyValue('margin-top'), 10)
+                            });
+
+                            entryInfo[i].childElements[ii].style['margin-top'] = 0;
+                            /*entryInfo[i].childElements[ii].style.background = 'hsla(0, 90%, 70%, .1)';*/
+                        }
+                    }
+                }
+            });
+
+            entryInfo[i].needsRepositioning();
+        }
+    };
+
+
     </script>
 </body>
 
