@@ -475,8 +475,8 @@ z-index: 1;
     font: normal 300 1.75rem/2rem "Helvetica Neue", Helvetica, sans-serif;
     text-transform: capitalize;
     color: hsl(61, 64%, 31%);
-    color: hsl(168, 100%, 22%);
-    color: hsl(195, 100%, 36%);
+    /*color: hsl(168, 100%, 22%);
+    color: hsl(195, 100%, 36%);*/
     font-style: italic;
     display: inline-block;
 }
