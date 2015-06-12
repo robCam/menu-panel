@@ -31,7 +31,7 @@
     <meta id="theme-color" name="theme-color" content="hsl(190, 100%, 36%)" />
     <!-- Add to homescreen for iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="apple-mobile-web-app-title" content="menu-panel" />
     <!-- Homescreen touch icons for iOS -->
     <link rel="apple-touch-icon" href="images/launcher-icons/icon-60x60.png" />
@@ -1043,8 +1043,25 @@
             });
 
             entryInfo[i].needsRepositioning();
+        };
+
+
+
+        function insertIOS8StatusBar() {
+            if (("standalone" in window.navigator) && (window.navigator.standalone)) {
+                if (navigator.appVersion.indexOf("OS 8") > 0) {
+                    var wrapper = document.querySelector('.wrapper'),
+                        statusBar = document.createElement('div');
+                    statusBar.classList.add('ios-status-bar');
+                    document.body.insertBefore(statusBar, wrapper);
+                    // reposition the wrapper to show the custom status bar.
+                    wrapper.classList.add('wrapper--ios8-standalone');
+                }
+            }
         }
-    };
+
+        insertIOS8StatusBar();
+    };    
 
 
     </script>
