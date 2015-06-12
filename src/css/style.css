@@ -409,6 +409,13 @@ z-index: 1;
             transition: opacity 1s ease 0s;
 }
 
+.main-content *::selection {
+  background: hsl(61, 70%, 51%);
+}
+.main-content *::-moz-selection {
+  background: hsl(61, 70%, 51%);
+}
+
 .main-content--fade {
     opacity: .3;
 }
