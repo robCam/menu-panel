@@ -518,6 +518,7 @@ z-index: 1;
     margin: 1rem 0 .5rem 0;
     width: 100%;
     display: inline-block;
+    font-size: 1rem;
     /*border: 1px solid hsl(168, 100%, 17%);
     padding: .5rem;
     border-radius: 6px;
@@ -559,6 +560,7 @@ z-index: 1;
 .characteristics, .sunlight, .colour, .size, .how-to-grow, .how-to-care {
     margin-top: 1rem;
     border-top: 1px solid hsl(0, 0%, 70%);
+    font-size: 1rem;
     break-inside: avoid-column;
 
     -webkit-column-break-inside: avoid;
@@ -605,6 +607,7 @@ z-index: 1;
     position: relative;
     display: block;
     height: 1.5rem;
+    font-size: 1rem;
 }
 
 .aspect li {
